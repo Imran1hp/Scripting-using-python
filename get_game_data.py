@@ -47,6 +47,7 @@ def main (source,target):
      target_path = os.path.join(cwd,target)
      game_paths = find_all_game_paths(source_path)
      new_game_dirs = get_name_from_paths(game_paths,"game")
+     
      create_dir(target_path)
 
      for src,dest in zip(game_paths,new_game_dirs):
@@ -60,8 +61,6 @@ if __name__ == "__main__":
      args = sys.argv
      if len(args)!=3:
           print("You must pass a source directory and a target directory -only.")
-
-
      source,target = args[1:]    
      main(source,target) 
 
